@@ -28,8 +28,8 @@ class ApiResponses {
  static async sendPostRequest(generatetoken, firstName, lastName, Addressline1, Addressline2) {
     const randomString = this.generateAlphanumeric(3);
     // NOTE: choose the correct environment URL for the token/auth you obtained
-    // const url = "https://staging.tvs.autovertplug.com/loan/create";
-    const url = "https://tvs.autovertplug.com/loan/create";
+    const url = "https://staging.tvs.autovertplug.com/loan/create";
+    // const url = "https://tvs.autovertplug.com/loan/create";
 
     // Normalize token: httpGetToken may return an object or the raw token string
     let token = generatetoken;
@@ -55,7 +55,7 @@ class ApiResponses {
     const postData = {
       order_number: "b26dae9845c0461f9bf396572ebdfc22-26"+ randomString,
       dob: "2024-07-23",
-      sku: "N6192690NH",
+      sku: "K41903605D",
       city: "Bengaluru",
       color: "Black",
       email: "test3@gmail.com",
@@ -74,7 +74,7 @@ class ApiResponses {
           accessory_price: "0"
         }
       ],
-      dealer_code: "14574",
+      dealer_code: "11568",
       fame_subsidy: "0",
       advance_value: 0,
       charger_price: "0",
@@ -103,9 +103,9 @@ class ApiResponses {
       "x-api-key": token,
       "X-Api-Key": token,
        //UAT Auth key
-       //"Authorization":"Basic dHZzdWF0YmNiNzdmMzM1M2VlMzU5ZWY0ZTI1OWUyOGZiMzBhOjdiNTBhOTlmYzY1ZTM5MzFjZDhhMzc5MWIxZTBhNzVjMGYzYQ=="
+       "Authorization":"Basic dHZzdWF0YmNiNzdmMzM1M2VlMzU5ZWY0ZTI1OWUyOGZiMzBhOjdiNTBhOTlmYzY1ZTM5MzFjZDhhMzc5MWIxZTBhNzVjMGYzYQ=="
        //Prod Auth Key
-      "Authorization": "Basic OWYzZmMwYmQ1Zjg5NDdjYjgxMmQwYTlkNGI3MjhkOTI3ZDM0OmRlMjRmZTQwMDk5NjE5YzY1OTlkMTU3N2VjODFjNjdkZmVhMw==",
+      // "Authorization": "Basic OWYzZmMwYmQ1Zjg5NDdjYjgxMmQwYTlkNGI3MjhkOTI3ZDM0OmRlMjRmZTQwMDk5NjE5YzY1OTlkMTU3N2VjODFjNjdkZmVhMw==",
     };
 
     try {
